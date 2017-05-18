@@ -14,8 +14,6 @@ public class OrientationLogger : MonoBehaviour {
 	[Range(1.0f, 360.0f)]
 	public float testOrientation = 180f;
 
-    public Image viewport;
-
 	private bool isLogging = false;
 	private float lastLogTimeNormalized = 0;
 
@@ -40,7 +38,6 @@ public class OrientationLogger : MonoBehaviour {
 		if(!SystemInfo.supportsGyroscope)
         {
             xOrientation = Input.acceleration.z;
-            GameObject.Find("Content").GetComponent<Text>().text = Input.acceleration.z.ToString();
 		}
 		else
         {
