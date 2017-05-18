@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -12,6 +13,8 @@ public class OrientationLogger : MonoBehaviour {
 	public float logInterval = 0.5f;
 	[Range(1.0f, 360.0f)]
 	public float testOrientation = 180f;
+
+    public Image viewport;
 
 	private bool isLogging = false;
 	private float lastLogTimeNormalized = 0;
@@ -34,14 +37,15 @@ public class OrientationLogger : MonoBehaviour {
 	public float CurrentOrientation()
 	{	
 		float xOrientation = 0;
-		if(!SystemInfo.supportsAccelerometer)
-		{
-			xOrientation = testOrientation;
+		if(!SystemInfo.supportsGyroscope)
+        {
+            xOrientation = Input.acceleration.z;
+            GameObject.Find("Content").GetComponent<Text>().text = Input.acceleration.z.ToString();
 		}
 		else
-		{
-			xOrientation = Input.gyro.attitude.eulerAngles.x;
-		}
+        {
+            xOrientation = Input.gyro.attitude.eulerAngles.x;
+        }
 
 		return xOrientation;
 	}
