@@ -28,11 +28,7 @@ public class TestScript : MonoBehaviour {
 	public void Update () {
 		if (Time.time - lastCheck >= interval && text != null && logger != null)
 		{
-            float c = 1f;
-            if (!SystemInfo.supportsGyroscope)
-                c = Mathf.Clamp((Mathf.Abs(logger.CurrentOrientation()) / lowerBound), 0, 1);
-            else
-                c = 1f - (Mathf.Clamp(logger.CurrentOrientation() - lowerBound, 0f, 80f - lowerBound) / (80f - lowerBound));
+            float c = 1f - (Mathf.Clamp(logger.CurrentOrientation() - lowerBound, 0f, 80f - lowerBound) / (80f - lowerBound));
             text.color = new Color(c,c,c,1f);
 			lastCheck = Time.time;
 		}

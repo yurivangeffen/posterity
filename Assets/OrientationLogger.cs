@@ -37,8 +37,10 @@ public class OrientationLogger : MonoBehaviour {
 		float xOrientation = 0;
 		if(!SystemInfo.supportsGyroscope)
         {
-            xOrientation = Input.acceleration.z;
-		}
+            float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;
+            //TODO: Properly decorate to produce equivalent results compared to Gyro
+            xOrientation = 90 - Mathf.Abs(Mathf.Abs(roll) - 90);
+        }
 		else
         {
             xOrientation = Input.gyro.attitude.eulerAngles.x;
