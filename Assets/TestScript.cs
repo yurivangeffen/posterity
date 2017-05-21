@@ -18,14 +18,18 @@ public class TestScript : MonoBehaviour {
 		{
 			logger.StartLogging();
 		}
+        if(!SystemInfo.supportsGyroscope)
+        {
+            lowerBound = 0.6f;
+        }
 	}
 	
 	// Update is called once per frame
 	public void Update () {
 		if (Time.time - lastCheck >= interval && text != null && logger != null)
 		{
-			float c = 1f - (Mathf.Clamp(logger.CurrentOrientation()-lowerBound, 0f, 80f-lowerBound) / (80f-lowerBound));
-			text.color = new Color(c,c,c,1f);
+            float c = 1f - (Mathf.Clamp(logger.CurrentOrientation() - lowerBound, 0f, 80f - lowerBound) / (80f - lowerBound));
+            text.color = new Color(c,c,c,1f);
 			lastCheck = Time.time;
 		}
 	}
