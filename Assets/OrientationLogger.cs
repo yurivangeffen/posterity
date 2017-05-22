@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class OrientationLogger : MonoBehaviour {
 
 	// Used to save the logged data.
+	public static float verticalCalibrationBound, horizontalCalibrationBound;
 	public static Dictionary<float,float> data;
 	public static string dataType;
 
@@ -32,19 +33,20 @@ public class OrientationLogger : MonoBehaviour {
 		isLogging = false;
 	}
 
-	static public float CurrentOrientation()
+	static public float CurrentOrientation(bool calibrated = true)
 	{	
 		float xOrientation = 0;
-		//if(!SystemInfo.supportsGyroscope)
-        //{
-            float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;
-            //TODO: Properly decorate to produce equivalent results compared to Gyro
-            xOrientation = 90 - Mathf.Abs(Mathf.Abs(roll) - 90);
-        //}
-		//else
-        //{
-        //    xOrientation = Input.gyro.attitude.eulerAngles.x;
-        //}
+
+		float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;
+		xOrientation = 90 - Mathf.Abs(Mathf.Abs(roll) - 90);
+
+		if (calibrated)
+		{
+			//Bound
+			xOrientation = Mathf.Clamp(xOrientation, horizontalCalibrationBound, verticalCalibrationBound);
+			//Range 0-90
+			xOrientation = ((xOrientation-horizontalCalibrationBound) / (verticalCalibrationBound-horizontalCalibrationBound)) * 90f;
+		}
 
 		return xOrientation;
 	}
@@ -52,6 +54,7 @@ public class OrientationLogger : MonoBehaviour {
 	private void LogData()
 	{
 		float xOrientation = CurrentOrientation();
+
 		Debug.Log(lastLogTimeNormalized + ": " + xOrientation);
 		data.Add(lastLogTimeNormalized, xOrientation);
 	}

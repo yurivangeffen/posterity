@@ -20,7 +20,7 @@ public class InitScript : MonoBehaviour {
 	void Update () {
 		if (Time.time - lastLogTime >= logInterval)
 		{
-			lastLoggedValue = OrientationLogger.CurrentOrientation();
+			lastLoggedValue = OrientationLogger.CurrentOrientation(false);
 			resultText.text = "Roll-angle: " + lastLoggedValue.ToString();
 			lastLogTime = Time.time;
 		}
@@ -28,18 +28,21 @@ public class InitScript : MonoBehaviour {
 
 	public void OnStartTestClicked()
 	{
+		OrientationLogger.dataType = "non_discrete";
     	Application.LoadLevel("TestScene");
 	}
 
 	public void OnCalibrateVertical()
 	{
 		verticalCalibration = Calibrate(20, 0.1f);
+		OrientationLogger.verticalCalibrationBound = verticalCalibration;
 		vertText.text = "Vertical: " + verticalCalibration.ToString();
 	}
 
 	public void OnCalibrateHorizontal()
 	{
 		horizontalCalibration = Calibrate(20, 0.1f);
+		OrientationLogger.horizontalCalibrationBound = horizontalCalibration;
 		horText.text = "Horizontal: " + horizontalCalibration.ToString();
 	}
 
@@ -50,7 +53,7 @@ public class InitScript : MonoBehaviour {
 		float calibration = 0f;
 		for (int i = 0; i < measurements; i++)
 		{
-			calibration += OrientationLogger.CurrentOrientation()/measurements;
+			calibration += OrientationLogger.CurrentOrientation(false)/measurements;
 			System.Threading.Thread.Sleep((int)intervalSeconds * 1000);
 		}
 		return calibration;
