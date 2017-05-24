@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 public class OrientationLogger : MonoBehaviour {
 
 	// Used to save the logged data.
+	public static float verticalCalibrationBound, horizontalCalibrationBound;
 	public static Dictionary<float,float> data;
 	public static string dataType;
 
@@ -31,16 +33,19 @@ public class OrientationLogger : MonoBehaviour {
 		isLogging = false;
 	}
 
-	public float CurrentOrientation()
+	static public float CurrentOrientation(bool calibrated = true)
 	{	
 		float xOrientation = 0;
-		if(!SystemInfo.supportsAccelerometer)
+
+		float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;
+		xOrientation = 90 - Mathf.Abs(Mathf.Abs(roll) - 90);
+
+		if (calibrated)
 		{
-			xOrientation = testOrientation;
-		}
-		else
-		{
-			xOrientation = Input.gyro.attitude.eulerAngles.x;
+			//Bound
+			xOrientation = Mathf.Clamp(xOrientation, horizontalCalibrationBound, verticalCalibrationBound);
+			//Range 0-90
+			xOrientation = ((xOrientation-horizontalCalibrationBound) / (verticalCalibrationBound-horizontalCalibrationBound)) * 90f;
 		}
 
 		return xOrientation;
@@ -49,6 +54,7 @@ public class OrientationLogger : MonoBehaviour {
 	private void LogData()
 	{
 		float xOrientation = CurrentOrientation();
+
 		Debug.Log(lastLogTimeNormalized + ": " + xOrientation);
 		data.Add(lastLogTimeNormalized, xOrientation);
 	}
