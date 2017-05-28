@@ -12,23 +12,40 @@ public class TestScript : MonoBehaviour {
 
 	public float lowerVisibleBound = 30;
 
+    public Notifier notifier;
+
 	// Use this for initialization
 	public void Start () {
 		if (logger != null)
 		{
-			logger.StartLogging();
+            switch(OrientationLogger.dataType)
+            {
+                case "discrete":
+                    notifier = gameObject.AddComponent<DiscreteNotifier>();
+                    break;
+                case "non_discrete":
+                default:
+                    notifier = gameObject.AddComponent<NonDiscreteNotifier>();
+                    break;
+            }
+            logger.StartLogging();
 		}
 	}
-	
-	// Update is called once per frame
-	public void Update () {
-		if (Time.time - lastCheck >= interval && text != null && logger != null)
-		{
+
+    // Update is called once per frame
+    public void Update()
+    {
+        if (Time.time - lastCheck >= interval && text != null && logger != null)
+        {
             float c = 1f - (Mathf.Clamp(OrientationLogger.CurrentOrientation() - lowerVisibleBound, 0f, 90f - lowerVisibleBound) / (90f - lowerVisibleBound));
-            text.color = new Color(c,c,c,1f);
-			lastCheck = Time.time;
-		}
-	}
+            text.color = new Color(c, c, c, 1f);
+            lastCheck = Time.time;
+        }
+        if (notifier != null)
+        {
+            notifier.Check(OrientationLogger.CurrentOrientation());
+        }
+    }
 
 	public void DoneReading()
 	{
