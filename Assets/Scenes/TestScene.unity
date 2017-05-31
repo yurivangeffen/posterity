@@ -832,6 +832,8 @@ GameObject:
   - component: {fileID: 2083029924}
   - component: {fileID: 2083029929}
   - component: {fileID: 2083029930}
+  - component: {fileID: 2083029932}
+  - component: {fileID: 2083029931}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -920,7 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64be26a421f564827a1825ab25408ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logInterval: 0.1
+  logInterval: 0.5
   testOrientation: 180
 --- !u!114 &2083029930
 MonoBehaviour:
@@ -934,8 +936,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logger: {fileID: 2083029929}
-  text: {fileID: 1260164454}
   interval: 0.1
   lastCheck: 0
+  gradualNotifier: {fileID: 2083029932}
+  instantNotifier: {fileID: 2083029931}
+--- !u!114 &2083029931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2083029923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b6c529439427a4d94a2afa20547a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDownTime: 0
+  thresholdTime: 0
+  timer: 0
+--- !u!114 &2083029932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2083029923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a51e25e4caa23946afcefb6103a3740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDownTime: 0
+  thresholdTime: 0
+  timer: 0
+  text: {fileID: 661568109}
   lowerVisibleBound: 30
-  notifier: {fileID: 0}

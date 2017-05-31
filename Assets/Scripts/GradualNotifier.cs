@@ -5,31 +5,18 @@ using UnityEngine.UI;
 
 public class GradualNotifier : Notifier
 {
-    public float alphaSpeed;
     public Text text;
-    public bool isExceeded;
+	public float lowerVisibleBound = 30;
 
 	// Use this for initialization
 	public override void Start()
     {
         base.Start();
-        isExceeded = false;
 	}
 	
-    void Update()
+    public override void Check(float value)
     {
-        Color color = text.color;
-        float alpha = color.a + (isExceeded ? -alphaSpeed : alphaSpeed) * Time.deltaTime;
-        text.color = new Color(color.r, color.g, color.b, alpha); 
-    }
-    
-	protected override void Notify()
-    {
-        isExceeded = true;
-	}
-
-    protected override void UnNotify()
-    {
-        isExceeded = false;
+        float alpha = 1f - (Mathf.Clamp(value - lowerVisibleBound, 0f, 90f - lowerVisibleBound) / (90f - lowerVisibleBound));
+        text.color = new Color(0f, 0f, 0f, alpha);
     }
 }

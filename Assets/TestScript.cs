@@ -8,8 +8,6 @@ public class TestScript : MonoBehaviour {
 	public float interval = 0.5f;
 	public float lastCheck = 0;
 
-	public float lowerVisibleBound = 30;
-
     public GradualNotifier gradualNotifier;
     public InstantNotifier instantNotifier;
 
@@ -39,12 +37,6 @@ public class TestScript : MonoBehaviour {
     // Update is called once per frame
     public void Update()
     {
-        if (Time.time - lastCheck >= interval && text != null && logger != null)
-        {
-            float c = 1f - (Mathf.Clamp(OrientationLogger.CurrentOrientation() - lowerVisibleBound, 0f, 90f - lowerVisibleBound) / (90f - lowerVisibleBound));
-            text.color = new Color(c, c, c, 1f);
-            lastCheck = Time.time;
-        }
         if (notifier != null)
         {
             notifier.Check(OrientationLogger.CurrentOrientation());
