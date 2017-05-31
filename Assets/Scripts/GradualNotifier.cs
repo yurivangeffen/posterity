@@ -8,12 +8,6 @@ public class GradualNotifier : Notifier
     public Text text;
 	public float lowerVisibleBound = 30;
 
-	// Use this for initialization
-	public override void Start()
-    {
-        base.Start();
-	}
-	
     public override void Check(float value)
     {
         float alpha = 1f - (Mathf.Clamp(value - lowerVisibleBound, 0f, 90f - lowerVisibleBound) / (90f - lowerVisibleBound));
