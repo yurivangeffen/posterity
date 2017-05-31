@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -31,6 +32,14 @@ public class OrientationLogger : MonoBehaviour {
 	public void StopLogging()
 	{
 		isLogging = false;
+
+        //Backup the data in case email fails
+        StreamWriter writer = new StreamWriter(Application.dataPath + "/results.txt");
+        foreach(KeyValuePair<float, float> kv in data)
+        {
+            writer.WriteLine(kv.Key + "," + kv.Value);
+        }
+        writer.Close();
 	}
 
 	static public float CurrentOrientation(bool calibrated = true)
