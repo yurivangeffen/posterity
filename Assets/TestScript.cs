@@ -5,14 +5,15 @@ using System.Collections;
 public class TestScript : MonoBehaviour {
 
 	public OrientationLogger logger;
-	public Text text;
-
 	public float interval = 0.5f;
 	public float lastCheck = 0;
 
 	public float lowerVisibleBound = 30;
 
-    public Notifier notifier;
+    public GradualNotifier gradualNotifier;
+    public InstantNotifier instantNotifier;
+
+    private Notifier notifier;
 
 	// Use this for initialization
 	public void Start () {
@@ -20,14 +21,17 @@ public class TestScript : MonoBehaviour {
 		{
             switch(OrientationLogger.dataType)
             {
-                case "discrete":
-                    notifier = gameObject.AddComponent<DiscreteNotifier>();
+                case "gradual":
+                    notifier = gradualNotifier;
+                    Destroy(instantNotifier);
                     break;
-                case "non_discrete":
+                case "instant":
                 default:
-                    notifier = gameObject.AddComponent<NonDiscreteNotifier>();
+                    notifier = instantNotifier;
+                    Destroy(gradualNotifier);
                     break;
             }
+            notifier.enabled = true;
             logger.StartLogging();
 		}
 	}

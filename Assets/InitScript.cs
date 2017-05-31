@@ -8,6 +8,7 @@ public class InitScript : MonoBehaviour {
 	public Text resultText;
 	public Text vertText;
 	public Text horText;
+	public Dropdown testType;
 
 	private float logInterval = 0.5f;
 	private float lastLogTime = 0;
@@ -28,7 +29,7 @@ public class InitScript : MonoBehaviour {
 
 	public void OnStartTestClicked()
 	{
-		OrientationLogger.dataType = "non_discrete";
+		OrientationLogger.dataType = testType.value == 0 ? "gradual" : "instant";
     	Application.LoadLevel("TestScene");
 	}
 

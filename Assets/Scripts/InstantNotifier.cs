@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NonDiscreteNotifier : Notifier
+public class InstantNotifier : Notifier
 {
     AndroidJavaObject currentActivity;
     string toastMessage;

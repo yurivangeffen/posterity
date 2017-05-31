@@ -21,7 +21,6 @@ public class OrientationLogger : MonoBehaviour {
 
 	public void StartLogging()
 	{
-		dataType = "non_discrete";
 		data = new Dictionary<float,float>();
 		isLogging = true;
 		Input.gyro.enabled = true;
