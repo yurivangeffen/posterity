@@ -9,7 +9,8 @@ public class OrientationLogger : MonoBehaviour {
 
 	// Used to save the logged data.
 	public static float verticalCalibrationBound, horizontalCalibrationBound;
-	public static Dictionary<float,float> data;
+	public static Dictionary<float,float> readData;
+    public static Dictionary<float, float> writeData;
 	public static string dataType;
 
 	public float logInterval = 0.5f;
@@ -22,7 +23,10 @@ public class OrientationLogger : MonoBehaviour {
 	public void StartLogging()
 	{
 		dataType = "non_discrete";
-		data = new Dictionary<float,float>();
+        if(readData == null)
+		    readData = new Dictionary<float,float>();
+        if(writeData == null)
+            writeData = new Dictionary<float, float>();
 		isLogging = true;
 		Input.gyro.enabled = true;
 		lastLogTimeNormalized = 0f;
@@ -34,13 +38,27 @@ public class OrientationLogger : MonoBehaviour {
 		isLogging = false;
 
         //Backup the data in case email fails
-        StreamWriter writer = new StreamWriter(Application.dataPath + "/results.txt");
-        foreach(KeyValuePair<float, float> kv in data)
+        StreamWriter writer;
+        if (Application.loadedLevelName == "TestScene")
         {
-            writer.WriteLine(kv.Key + "," + kv.Value);
+            writer = new StreamWriter(Application.dataPath + "/results.txt");
+            foreach (KeyValuePair<float, float> kv in readData)
+            {
+                writer.WriteLine(kv.Key + "," + kv.Value);
+            }
+            writer.WriteLine("INTERMISSION");
+            writer.Close();
         }
-        writer.Close();
-	}
+        else
+        {
+            writer = new StreamWriter(Application.dataPath + "/results.txt", true);
+            foreach (KeyValuePair<float, float> kv in writeData)
+            {
+                writer.WriteLine(kv.Key + "," + kv.Value);
+            }
+            writer.Close();
+        }
+    }
 
 	static public float CurrentOrientation(bool calibrated = true)
 	{	
@@ -65,7 +83,16 @@ public class OrientationLogger : MonoBehaviour {
 		float xOrientation = CurrentOrientation();
 
 		Debug.Log(lastLogTimeNormalized + ": " + xOrientation);
-		data.Add(lastLogTimeNormalized, xOrientation);
+        if (Application.loadedLevelName == "WritingScene")
+        {
+            Debug.Log("WriteData added");
+            writeData.Add(lastLogTimeNormalized, xOrientation);
+        }
+        else
+        {
+            Debug.Log("ReadData added");
+            readData.Add(lastLogTimeNormalized, xOrientation);
+        }
 	}
 
 	// Update is called once per frame
