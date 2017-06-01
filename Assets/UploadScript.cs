@@ -26,12 +26,20 @@ public class UploadScript : MonoBehaviour {
 	private string GetDataString()
 	{
 		string csv = "Time;Angle";
-		Dictionary<float, float> dict = new Dictionary<float, float>(OrientationLogger.data);
+		Dictionary<float, float> dict = new Dictionary<float, float>(OrientationLogger.readData);
+        Dictionary<float, float> dict2 = new Dictionary<float, float>(OrientationLogger.writeData);
 	
 		foreach (KeyValuePair<float,float> item in dict)
 		{
 			csv += "\n" + item.Key + ";" + item.Value;
-		}
+        }
+        csv += "\n";
+
+        foreach (KeyValuePair<float, float> item in dict2)
+        {
+            csv += "\n" + item.Key + ";" + item.Value;
+        }
+
 
 		return csv;
 	}
