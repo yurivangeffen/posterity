@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InstantNotifier : Notifier
 {
-    public float coolDownTime = 6f;
     public float thresholdTime = 2.0f;
     public float timer;
     protected float threshold;
@@ -21,22 +20,28 @@ public class InstantNotifier : Notifier
         toastCanvasGroup.alpha = 0f;
 
         timer = thresholdTime;
-        threshold = 50f;
     }
 
     public override void Check(float value)
     {
-        if (value > threshold)
+        // Check if we are over the threshold
+        if (value >= threshold)
         {
             timer -= Time.deltaTime;
+            // ...longer than allowed
+            if (timer <= 0 && !isNotifying)
+            {
+                Notify();
+            }
         }
         else
         {            
-            if (timer <= 0)
+            // should we un-show the notification?
+            if (timer < threshold && isNotifying)
             {
-                Notify();
-                timer = thresholdTime;
+                UnNotify();
             }
+            timer = thresholdTime;
         }
     }
 
@@ -44,6 +49,7 @@ public class InstantNotifier : Notifier
     {
         if (!isNotifying)
         {
+            Debug.Log("Notifying...");
             isNotifying = true;
             Handheld.Vibrate();
             
@@ -55,6 +61,7 @@ public class InstantNotifier : Notifier
     {
         if(isNotifying && !isFading)
         {
+            Debug.Log("Unnotifying...");
             isNotifying = false;
             StartCoroutine(FadeOut());
         }

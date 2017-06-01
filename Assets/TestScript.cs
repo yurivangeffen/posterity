@@ -46,9 +46,11 @@ public class TestScript : MonoBehaviour {
 	public void DoneReading()
 	{
 		logger.StopLogging();
-        if (Application.loadedLevelName == "TestScene")
-            Application.LoadLevel("IntermissionScene");
-        else
-            Application.LoadLevel("FinishedScene");
+        Application.LoadLevel("IntermissionScene");
+	}
+	public void DoneWriting()
+	{
+		logger.StopLogging();
+        Application.LoadLevel("FinishedScene");
 	}
 }
