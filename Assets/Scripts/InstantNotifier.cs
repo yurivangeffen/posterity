@@ -7,7 +7,7 @@ public class InstantNotifier : Notifier
 {
     public float thresholdTime = 2.0f;
     public float timer;
-    protected float threshold;
+    public float threshold = 30f;
 
     public CanvasGroup toastCanvasGroup;
     public float fadeSeconds = 1f;

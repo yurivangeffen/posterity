@@ -16,7 +16,8 @@ public class OrientationLogger : MonoBehaviour {
 	public float logInterval = 0.5f;
 
 	private bool isLogging = false;
-	private float lastLogTimeNormalized = 0;
+	private float lastLogTimeNormalized = 0f;
+	private float lastLogTime = 0f;
 
 	public void StartLogging()
 	{
@@ -27,6 +28,7 @@ public class OrientationLogger : MonoBehaviour {
 		isLogging = true;
 		Input.gyro.enabled = true;
 		lastLogTimeNormalized = 0f;
+		lastLogTime = Time.time;
 		LogData();
 	}
 
@@ -36,6 +38,9 @@ public class OrientationLogger : MonoBehaviour {
 
         //Backup the data in case email fails
         StreamWriter writer;
+
+// Only works like this on android. iOS does not allow.
+#if !UNITY_IOS
         if (Application.loadedLevelName == "TestScene")
         {
             writer = new StreamWriter(Application.dataPath + "/results.txt");
@@ -51,18 +56,19 @@ public class OrientationLogger : MonoBehaviour {
             writer = new StreamWriter(Application.dataPath + "/results.txt", true);
             foreach (KeyValuePair<float, float> kv in writeData)
             {
-                writer.WriteLine(kv.Key + "," + kv.Value);
+                writer.WriteLine(kv.Key + ";" + kv.Value);
             }
             writer.Close();
         }
+#endif
     }
 
 	static public float CurrentOrientation(bool calibrated = true)
 	{	
 		float xOrientation = 0;
 
-		float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;
-		xOrientation = 90 - Mathf.Abs(Mathf.Abs(roll) - 90);
+		float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;		
+		xOrientation = Mathf.Abs(roll) - 90f;
 
 		if (calibrated)
 		{
@@ -94,9 +100,10 @@ public class OrientationLogger : MonoBehaviour {
 
 	// Update is called once per frame
 	public void Update () {
-		if (isLogging && Time.time - lastLogTimeNormalized >= logInterval)
+		if (isLogging && Time.time - lastLogTime >= logInterval)
 		{
 			lastLogTimeNormalized += logInterval;
+			lastLogTime = Time.time;
 			LogData();
 		}
 	}
