@@ -30,7 +30,7 @@ public class InitScript : MonoBehaviour {
 	public void OnStartTestClicked()
 	{
 		OrientationLogger.dataType = testType.value == 0 ? "gradual" : "instant";
-    	Application.LoadLevel("TestScene");
+    	Application.LoadLevel("IntroductionScene");
 	}
 
 	public void OnCalibrateVertical()

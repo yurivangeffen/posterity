@@ -6,7 +6,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     public void DoneIntro()
     {
-        Application.LoadLevel("InitScene");
+        Application.LoadLevel("TestScene");
     }
 
     public void DoneIntermission()
