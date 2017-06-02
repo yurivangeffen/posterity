@@ -35,32 +35,6 @@ public class OrientationLogger : MonoBehaviour {
 	public void StopLogging()
 	{
 		isLogging = false;
-
-        //Backup the data in case email fails
-        StreamWriter writer;
-
-// Only works like this on android. iOS does not allow.
-#if !UNITY_IOS
-        if (Application.loadedLevelName == "TestScene")
-        {
-            writer = new StreamWriter(Application.dataPath + "/results.txt");
-            foreach (KeyValuePair<float, float> kv in readData)
-            {
-                writer.WriteLine(kv.Key + "," + kv.Value);
-            }
-            writer.WriteLine("INTERMISSION");
-            writer.Close();
-        }
-        else
-        {
-            writer = new StreamWriter(Application.dataPath + "/results.txt", true);
-            foreach (KeyValuePair<float, float> kv in writeData)
-            {
-                writer.WriteLine(kv.Key + ";" + kv.Value);
-            }
-            writer.Close();
-        }
-#endif
     }
 
 	static public float CurrentOrientation(bool calibrated = true)
