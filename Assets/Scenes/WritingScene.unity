@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 7
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -25,7 +25,6 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,11 +37,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 7
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +53,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 4
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -67,27 +66,13 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 1
-    m_BakeBackend: 0
-    m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
-    m_PVRBounces: 2
-    m_PVRFiltering: 0
-    m_PVRFilteringMode: 1
-    m_PVRCulling: 1
-    m_PVRFilteringGaussRadiusDirect: 1
-    m_PVRFilteringGaussRadiusIndirect: 5
-    m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -104,8 +89,6 @@ NavMeshSettings:
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
-    manualTileSize: 0
-    tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &294659345
@@ -138,11 +121,11 @@ RectTransform:
   m_Children:
   - {fileID: 661568108}
   m_Father: {fileID: 1260164452}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294659347
@@ -230,6 +213,123 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 294659345}
+--- !u!1001 &507999298
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1260164452}
+    m_Modifications:
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 163.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -883.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 298.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+      propertyPath: m_Name
+      value: QuestionCombo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: The title of this article is "If Shell knew climate change was dire 25
+        years ago, why still business as usual today?" Based on the text and your
+        own opinion, why do you think Shell have not changed their business, despite
+        the knowledge of climate change?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &507999299 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 507999298}
 --- !u!1 &661568107
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +548,7 @@ Canvas:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1015822444}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
@@ -457,7 +557,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -481,6 +580,121 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1203862141
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1260164452}
+    m_Modifications:
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 163.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -401.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 298.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+      propertyPath: m_Name
+      value: QuestionCombo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: What is the Global Climate Coalition (GCC), and who were members/founders
+        of that group?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1203862142 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1203862141}
 --- !u!1 &1260164451
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +706,7 @@ GameObject:
   - component: {fileID: 1260164455}
   - component: {fileID: 1260164454}
   - component: {fileID: 1260164453}
+  - component: {fileID: 1260164456}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -509,6 +724,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1950229846}
+  - {fileID: 1644295076}
+  - {fileID: 1203862142}
+  - {fileID: 2102710424}
+  - {fileID: 1518367116}
+  - {fileID: 507999299}
   - {fileID: 294659346}
   m_Father: {fileID: 825842590}
   m_RootOrder: 0
@@ -563,99 +784,35 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Denis Healey is bijna op het Londense vliegveld Heathrow als hij plotsklaps
-    moet omkeren. De Britse minister van Financi\xEBn beleeft moeilijke tijden: het
-    is 1976 en de economie zit in een zware dip. Op deze dag ontstaat er ineens onrust
-    op de financi\xEBle markten en dreigt de koers van de pond nog verder te zakken.
-    Dat is de druppel: Healey annuleert zijn vliegreis en maakt rechtsomkeert om een
-    persconferentie te geven. Daar maakt hij bekend: het Verenigd Koninkrijk vraagt
-    het Internationaal Monetair Fonds (IMF) om een noodlening. Na een paar maanden
-    onderhandelen bereiken de Britten en het IMF een akkoord. Maar de eisen zijn streng:
-    in ruil voor een lening van 2,3\_miljard pond moet de Britse regering 2,5 miljard
-    pond bezuinigen.\n\nDe periode staat gegrift in het Britse politieke geheugen.
-    De economische malaise droeg bij aan het succes van de conservatieve Margaret
-    Thatcher, die drie jaar na Healey\u2019s bekendmaking aan de macht kwam. Haar
-    regeerperiode vormde een historische wending in het Verenigd Koninkrijk. De vrijemarktfilosofie
-    die ze introduceerde en die haar beleid kenmerkte heeft tot de dag van vandaag
-    invloed op de Britse politiek.\nEn toch, het had allemaal heel anders kunnen lopen.
-    Toen nieuwe gegevens beschikbaar kwamen, bleek: die crisis viel eigenlijk best
-    mee. \u2018Als we toen de juiste getallen hadden gehad, hadden we die lening nooit
-    hoeven aanvragen,\u2019 zei Healey later.\n\nRecessie, schmecessie\nOok in Nederland
-    spelen economische indicatoren een belangrijke rol. En ook hier blijken de cijfers
-    er nog wel eens naast te zitten. Zo kondigde het CBS vorige maand nog aan dat
-    de economie afgelopen kwartaal met 0,1 procent was gegroeid. En dat de economie
-    nu \u20181,9 procent groter [is] dan in het derde kwartaal van 2014\u2019. De
-    getallen werden volop geduid in het nieuws: de groei zou zijn aangetrokken door
-    de bouw van nieuwe huizen en de verkoop van auto\u2019s. Maar een belangrijke
-    zin uit het CBS-persbericht werd door nagenoeg alle media genegeerd: \u2018Het
-    groeicijfer is gebaseerd op een eerste berekening met de gegevens die nu beschikbaar
-    zijn\u2019. De cijfers kunnen dus nog veranderen. Dat gebeurt wel vaker. Sterker
-    nog, het is eerder de regel dan de uitzondering: de groei in het tweede kwartaal
-    van dit jaar is al bijgesteld van 0,1 naar 0,2 procent. Het eerste kwartaal ging
-    van 0,4 naar 0,6 procent. Beetje vroeg dus, om al verbanden te leggen met de huizen-
-    en automarkt.\nNu zijn deze aanpassingen nog klein, maar soms kunnen correcties
-    een radicaal ander beeld van de economie geven. Of je in een recessie zit, bijvoorbeeld.
-    In 1996 lieten economische indicatoren nog zien dat de Britse economie tien recessies
-    had beleefd tussen 1955 en 1995. Maar een dataset uit 2012 toonde een rooskleuriger
-    beeld: er hadden in hetzelfde tijdsbestek maar zeven recessies plaatsgevonden.\n\nWaarom
-    je nooit precies kunt meten\nEconomische cijfers zijn slechts \xE9\xE9n geval.
-    Wetenschappers, politici en journalisten slaan je dagelijks om de oren met nauwkeurige
-    getallen. De precisie geeft de indruk van zekerheid, van deskundigheid. Maar vaak
-    zijn de cijfers t\xE9 nauwkeurig.\nOp het moment dat je iets gaat meten weet je
-    nooit helemaal zeker of de meting klopt, of het nou om euro\u2019s, personen of
-    jaren gaat. Zelfs bij de meest eenvoudige zaken is het exacte getal ongrijpbaar.
-    Dat heeft twee oorzaken.\nAllereerst: hoe definieer je wat je meet? Stel, je geeft
-    een verjaardagsfeest en iemand vraagt je de volgende dag hoeveel mensen er waren.
-    Tel je alleen de mensen die de hele avond zijn gebleven? Of leg je de grens bij
-    een uur? Een half uur? Wat doe je met de baby van Peter en Mieke, die in de logeerkamer
-    lag te slapen? En hoe zit het met die party crashers die je helemaal niet had
-    uitgenodigd? Het is dus al lastig een goede definitie te vinden voor iets eenvoudigs
-    als feestgangers. Wat dacht je dan van vage of controversi\xEBle begrippen als
-    terrorisme, geluk en intelligentie?\nAl kom je tot een definitie, dan nog is er
-    een foutenmarge. Er is namelijk een grens aan hoe exact je kunt zijn. Bovendien
-    heb je niet altijd alle gegevens die je nodig hebt, zoals het CBS bij de eerste
-    berekening van de economische groei. Tot slot kun je ook gewoon fouten maken.
-    Wie weet heb je op je feest mensen over het hoofd gezien. Misschien had je te
-    veel gedronken of was je te druk aan het praten met anderen. Nu heeft het geen
-    grote gevolgen als jij 31 in plaats van 33 mensen op bezoek hebt gehad. Maar in
-    andere gevallen kan het grote consequenties hebben. Bij verkiezingen bijvoorbeeld,
-    het feest van de democratie.\n\nEen geldige stem uitbrengen is nog niet zo makkelijk\nStemmen
-    tellen, het lijkt zo\u2019n eenvoudige zaak. Maar net als met je verjaardag kan
-    er op twee vlakken iets misgaan. Allereerst: hoe definieer je wat een geldige
-    stem is? Een bizarre discussie op 18 december 2008 laat pijnlijk zien hoe moeilijk
-    dit is. Rechters en advocaten kwamen op die dag bij elkaar in een rechtszaal in
-    de Amerikaanse staat Minnesota. De senaatsverkiezing was al meer dan een maand
-    achter de rug, maar nog steeds was de uitslag niet bekend. Het was krap, heel
-    krap: de Democraat Al Franken had maar 215 stemmen minder dan de Republikein Norm
-    Coleman. En dus moesten de stemmen herteld en gingen advocaten van beide kanten
-    elk stembiljet nauwkeurig ontleden. Zo ook het biljet waar iemand het vakje bij
-    Al Franken had ingekleurd maar ook \u2018Hagedissen Mensen\u2019 had opgeschreven.
-    Dat is een stem voor Franken, vond Marc Elias, Frankens advocaat. Maar de advocaat
-    van Coleman was het daar niet mee eens: de stem telde niet, want er was een naam
-    ingevuld. Onzin, reageerde Elias, Hagedissen Mensen is niet eens een echt persoon.\nDe
-    rechters mengden zich in de discussie. \u2018Je kunt niet weten of er iemand bestaat
-    met de naam \u201CHagedissen Mensen\u201D,\u2019 zei rechter Eric Magnuson. \u2018Trouwens,\u2019
-    vroeg een andere rechter, Edward Cleary. \u2018Is \u2018Mensen\u2019 niet meervoud?\u2019\n\u2018Je
-    kunt toch ook Sims van je achternaam heten?\u2019 reageerde Magnuson.\nDe conclusie
-    van deze idiote discussie: Hagedissen Mensen zou een echt persoon kunnen zijn,
-    dus het stembiljet was ongeldig. Niet veel later was het alweer tijd voor de volgende
-    absurde casus: iemand had op een stembiljet \u2018-stein\u2019 achter Al Frankens
-    naam gekrabbeld. Naast de definitie, speelt - net als bij de feestgangers - een
-    ander probleem: er kan een hoop misgaan. Stemmentellers kunnen het biljet verkeerd
-    lezen, de tel kwijtraken of een foutje maken bij het invullen van het aantal stemmen.\nDubbelzinnige
-    stembiljetten en telfouten zorgen voor een foutenmarge in het aantal stemmen.
-    Het is vaak moeilijk te zeggen hoe groot die marge precies is. Maar in het geval
-    van Minnesota was het duidelijk. Daar bleek bij een hertelling dat er 0,04 procent
-    verschil zat tussen de eerste en de tweede telling van de stemmen.\nJe kunt beter
-    een muntje opgooien\nOp 13 april werd bekend: Al Franken had gewonnen. Maar zijn
-    voorsprong was miniem: 312 stemmen - 0,01 procent van het totaal. Dat is minder
-    dan de 0,04 procent marge, en dus had net zo goed Coleman senator kunnen worden.\n\n\n\n\n\n"
+  m_Text: 
 --- !u!222 &1260164455
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1260164451}
+--- !u!114 &1260164456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260164451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
 --- !u!1001 &1287593459
 Prefab:
   m_ObjectHideFlags: 0
@@ -766,6 +923,122 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 225284500964633432, guid: 5cf58f797419c4100a154a488b90e93c,
     type: 2}
   m_PrefabInternal: {fileID: 1287593459}
+--- !u!1001 &1518367115
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1260164452}
+    m_Modifications:
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 163.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -723.14996
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 298.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+      propertyPath: m_Name
+      value: QuestionCombo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: '"Shell has also lobbied directly to undermine European renewable energy
+        targets, a sector it has invested in, although at a much lower level than
+        oil and gas" What was the purpose of this lobby?'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1518367116 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1518367115}
 --- !u!1 &1525320439
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +1101,124 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1644295075
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1260164452}
+    m_Modifications:
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 163.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -241.04999
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 298.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+      propertyPath: m_Name
+      value: QuestionCombo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: 'According to Prof. Tom Wigley, the predications in the movie <i> Climate
+        of Concern</i> were "remarkably prescient". Which predictions were correct
+        according to Wigley?
+
+'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1644295076 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1644295075}
 --- !u!1001 &1859951299
 Prefab:
   m_ObjectHideFlags: 0
@@ -886,6 +1277,134 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1859951299}
   m_Script: {fileID: 11500000, guid: 3edf9813712fd42aa8dac0a4e98b4d23, type: 3}
+--- !u!1001 &1950229845
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1260164452}
+    m_Modifications:
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 163.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -80.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 298.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1950229846 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1950229845}
+--- !u!1 &1950229847 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1950229845}
+--- !u!114 &1950229848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950229847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
 --- !u!1 &1982311901
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,3 +1506,121 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &2102710423
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1260164452}
+    m_Modifications:
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 163.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -562.44995
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 298.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+      propertyPath: m_Name
+      value: QuestionCombo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Complete the sentence: "Shell had, in fact, known of the risks of climate
+        change even earlier. A "confidential" company report written in 1986, also
+        seen by the guardian, noted the significant uncertainties in climate science
+        at the time but warned of the possibility of "fast and dramatic" changes that
+        would impact ..."'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &2102710424 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
+    type: 2}
+  m_PrefabInternal: {fileID: 2102710423}
