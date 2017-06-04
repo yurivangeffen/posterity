@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 1260164455}
   - component: {fileID: 1260164453}
   - component: {fileID: 1260164456}
+  - component: {fileID: 1260164454}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -769,6 +770,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!225 &1260164454
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260164451}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!222 &1260164455
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1244,7 +1256,7 @@ Prefab:
         type: 2}
       propertyPath: text
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1260164454}
     - target: {fileID: 114594751981697466, guid: 68513e70e9d8249eab350a7ecf591607,
         type: 2}
       propertyPath: toastCanvasGroup
