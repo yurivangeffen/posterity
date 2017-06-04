@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GradualNotifier : Notifier
 {
     public CanvasGroup text;
-	public float upperVisibleRange = 30;
+	public static float upperVisibleRange = 60;
 
     public override void Check(float value)
     {

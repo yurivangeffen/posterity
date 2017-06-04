@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class InstantNotifier : Notifier
 {
-    public float thresholdTime = 2.0f;
     public float timer;
-    public float threshold = 30f;
+    public static float threshold = 30f;
+    public static float thresholdTime = 5.0f;
 
     public CanvasGroup toastCanvasGroup;
     public float fadeSeconds = 1f;

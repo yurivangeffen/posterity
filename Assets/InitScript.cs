@@ -9,6 +9,9 @@ public class InitScript : MonoBehaviour {
 	public Text vertText;
 	public Text horText;
 	public Dropdown testType;
+	public GameObject gradualRange;
+	public GameObject instantThreshold;
+	public GameObject instantDelay;
 
 	private float logInterval = 0.5f;
 	private float lastLogTime = 0;
@@ -17,8 +20,23 @@ public class InitScript : MonoBehaviour {
 	private float verticalCalibration;
 	private float horizontalCalibration;
 		
+
+	public void Start()
+	{
+		gradualRange.transform.GetComponentInChildren<InputField>().text = ((int)GradualNotifier.upperVisibleRange).ToString();
+		instantThreshold.transform.GetComponentInChildren<InputField>().text = ((int)InstantNotifier.threshold).ToString();
+		instantDelay.transform.GetComponentInChildren<InputField>().text = ((int)InstantNotifier.thresholdTime).ToString();
+	}
+
 	// Update is called once per frame
 	void Update () {
+		// Set the right UI.
+
+		gradualRange.SetActive(testType.value == 0);
+		instantThreshold.SetActive(testType.value == 1);
+		instantDelay.SetActive(testType.value == 1);
+
+
 		if (Time.time - lastLogTime >= logInterval)
 		{
 			lastLoggedValue = OrientationLogger.CurrentOrientation(false);
@@ -30,6 +48,10 @@ public class InitScript : MonoBehaviour {
 	public void OnStartTestClicked()
 	{
 		OrientationLogger.dataType = testType.value == 0 ? "gradual" : "instant";
+		GradualNotifier.upperVisibleRange = int.Parse(gradualRange.transform.GetComponentInChildren<InputField>().text);
+		InstantNotifier.threshold = int.Parse(instantThreshold.transform.GetComponentInChildren<InputField>().text);
+		InstantNotifier.thresholdTime = float.Parse(instantDelay.transform.GetComponentInChildren<InputField>().text);
+
     	Application.LoadLevel("IntroductionScene");
 	}
 
