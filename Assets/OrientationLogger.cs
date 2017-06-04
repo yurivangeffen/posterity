@@ -39,18 +39,19 @@ public class OrientationLogger : MonoBehaviour {
 
 	static public float CurrentOrientation(bool calibrated = true)
 	{	
-		float xOrientation = 0;
-
 		float roll = Mathf.Atan2(Input.acceleration.y, Input.acceleration.z) * 180 / Mathf.PI;		
-		xOrientation = Mathf.Abs(roll) - 90f;
+		float xOrientation = Mathf.Abs(roll) - 90f;
 
 		if (calibrated)
 		{
 			//Bound
-			xOrientation = Mathf.Clamp(xOrientation, horizontalCalibrationBound, verticalCalibrationBound);
+			xOrientation = Mathf.Clamp(xOrientation, verticalCalibrationBound, horizontalCalibrationBound);
+			Debug.Log("xOrientation: " + xOrientation);
 			//Range 0-90
-			xOrientation = ((xOrientation-horizontalCalibrationBound) / (verticalCalibrationBound-horizontalCalibrationBound)) * 90f;
+			xOrientation = ((xOrientation-verticalCalibrationBound) / (horizontalCalibrationBound-verticalCalibrationBound)) * 90f;
+			Debug.Log("xOrientation2: " + xOrientation);
 		}
+
 
 		return xOrientation;
 	}

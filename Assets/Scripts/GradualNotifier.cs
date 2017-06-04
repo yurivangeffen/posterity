@@ -10,7 +10,7 @@ public class GradualNotifier : Notifier
 
     public override void Check(float value)
     {
-        float alpha = 1f - (Mathf.Clamp(value - upperVisibleRange, 0f, 90f - upperVisibleRange) / (90f - upperVisibleRange));
+        float alpha = 1f - (Mathf.Clamp(value, 0f, upperVisibleRange) / (upperVisibleRange));
         text.alpha = alpha;
     }
 }

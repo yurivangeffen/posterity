@@ -39,7 +39,7 @@ public class TestScript : MonoBehaviour {
     {
         if (notifier != null)
         {
-            notifier.Check(OrientationLogger.CurrentOrientation(false));
+            notifier.Check(OrientationLogger.CurrentOrientation());
         }
     }
 

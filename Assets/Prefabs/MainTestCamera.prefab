@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  upperVisibleRange: 30
+  upperVisibleRange: 60
 --- !u!114 &114594751981697466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thresholdTime: 5
   timer: 0
-  threshold: 0
+  threshold: 30
   toastCanvasGroup: {fileID: 0}
   fadeSeconds: 1
 --- !u!114 &114656907614940250

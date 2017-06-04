@@ -520,16 +520,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114406890582741552, guid: 68513e70e9d8249eab350a7ecf591607,
-        type: 2}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1260164456}
     - target: {fileID: 114594751981697466, guid: 68513e70e9d8249eab350a7ecf591607,
         type: 2}
       propertyPath: toastCanvasGroup
       value: 
       objectReference: {fileID: 1979572445}
+    - target: {fileID: 114406890582741552, guid: 68513e70e9d8249eab350a7ecf591607,
+        type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1260164456}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68513e70e9d8249eab350a7ecf591607, type: 2}
   m_IsPrefabParent: 0
