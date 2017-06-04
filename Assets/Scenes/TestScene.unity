@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 7
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -25,7 +25,6 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,11 +37,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 7
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +53,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 4
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -67,27 +66,13 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 1
-    m_BakeBackend: 0
-    m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
-    m_PVRBounces: 2
-    m_PVRFiltering: 0
-    m_PVRFilteringMode: 1
-    m_PVRCulling: 1
-    m_PVRFilteringGaussRadiusDirect: 1
-    m_PVRFilteringGaussRadiusIndirect: 5
-    m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -104,8 +89,6 @@ NavMeshSettings:
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
-    manualTileSize: 0
-    tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &294659345
@@ -448,7 +431,7 @@ Canvas:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1015822444}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
@@ -457,7 +440,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -615,93 +597,131 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Denis Healey is bijna op het Londense vliegveld Heathrow als hij plotsklaps
-    moet omkeren. De Britse minister van Financi\xEBn beleeft moeilijke tijden: het
-    is 1976 en de economie zit in een zware dip. Op deze dag ontstaat er ineens onrust
-    op de financi\xEBle markten en dreigt de koers van de pond nog verder te zakken.
-    Dat is de druppel: Healey annuleert zijn vliegreis en maakt rechtsomkeert om een
-    persconferentie te geven. Daar maakt hij bekend: het Verenigd Koninkrijk vraagt
-    het Internationaal Monetair Fonds (IMF) om een noodlening. Na een paar maanden
-    onderhandelen bereiken de Britten en het IMF een akkoord. Maar de eisen zijn streng:
-    in ruil voor een lening van 2,3\_miljard pond moet de Britse regering 2,5 miljard
-    pond bezuinigen.\n\nDe periode staat gegrift in het Britse politieke geheugen.
-    De economische malaise droeg bij aan het succes van de conservatieve Margaret
-    Thatcher, die drie jaar na Healey\u2019s bekendmaking aan de macht kwam. Haar
-    regeerperiode vormde een historische wending in het Verenigd Koninkrijk. De vrijemarktfilosofie
-    die ze introduceerde en die haar beleid kenmerkte heeft tot de dag van vandaag
-    invloed op de Britse politiek.\nEn toch, het had allemaal heel anders kunnen lopen.
-    Toen nieuwe gegevens beschikbaar kwamen, bleek: die crisis viel eigenlijk best
-    mee. \u2018Als we toen de juiste getallen hadden gehad, hadden we die lening nooit
-    hoeven aanvragen,\u2019 zei Healey later.\n\nRecessie, schmecessie\nOok in Nederland
-    spelen economische indicatoren een belangrijke rol. En ook hier blijken de cijfers
-    er nog wel eens naast te zitten. Zo kondigde het CBS vorige maand nog aan dat
-    de economie afgelopen kwartaal met 0,1 procent was gegroeid. En dat de economie
-    nu \u20181,9 procent groter [is] dan in het derde kwartaal van 2014\u2019. De
-    getallen werden volop geduid in het nieuws: de groei zou zijn aangetrokken door
-    de bouw van nieuwe huizen en de verkoop van auto\u2019s. Maar een belangrijke
-    zin uit het CBS-persbericht werd door nagenoeg alle media genegeerd: \u2018Het
-    groeicijfer is gebaseerd op een eerste berekening met de gegevens die nu beschikbaar
-    zijn\u2019. De cijfers kunnen dus nog veranderen. Dat gebeurt wel vaker. Sterker
-    nog, het is eerder de regel dan de uitzondering: de groei in het tweede kwartaal
-    van dit jaar is al bijgesteld van 0,1 naar 0,2 procent. Het eerste kwartaal ging
-    van 0,4 naar 0,6 procent. Beetje vroeg dus, om al verbanden te leggen met de huizen-
-    en automarkt.\nNu zijn deze aanpassingen nog klein, maar soms kunnen correcties
-    een radicaal ander beeld van de economie geven. Of je in een recessie zit, bijvoorbeeld.
-    In 1996 lieten economische indicatoren nog zien dat de Britse economie tien recessies
-    had beleefd tussen 1955 en 1995. Maar een dataset uit 2012 toonde een rooskleuriger
-    beeld: er hadden in hetzelfde tijdsbestek maar zeven recessies plaatsgevonden.\n\nWaarom
-    je nooit precies kunt meten\nEconomische cijfers zijn slechts \xE9\xE9n geval.
-    Wetenschappers, politici en journalisten slaan je dagelijks om de oren met nauwkeurige
-    getallen. De precisie geeft de indruk van zekerheid, van deskundigheid. Maar vaak
-    zijn de cijfers t\xE9 nauwkeurig.\nOp het moment dat je iets gaat meten weet je
-    nooit helemaal zeker of de meting klopt, of het nou om euro\u2019s, personen of
-    jaren gaat. Zelfs bij de meest eenvoudige zaken is het exacte getal ongrijpbaar.
-    Dat heeft twee oorzaken.\nAllereerst: hoe definieer je wat je meet? Stel, je geeft
-    een verjaardagsfeest en iemand vraagt je de volgende dag hoeveel mensen er waren.
-    Tel je alleen de mensen die de hele avond zijn gebleven? Of leg je de grens bij
-    een uur? Een half uur? Wat doe je met de baby van Peter en Mieke, die in de logeerkamer
-    lag te slapen? En hoe zit het met die party crashers die je helemaal niet had
-    uitgenodigd? Het is dus al lastig een goede definitie te vinden voor iets eenvoudigs
-    als feestgangers. Wat dacht je dan van vage of controversi\xEBle begrippen als
-    terrorisme, geluk en intelligentie?\nAl kom je tot een definitie, dan nog is er
-    een foutenmarge. Er is namelijk een grens aan hoe exact je kunt zijn. Bovendien
-    heb je niet altijd alle gegevens die je nodig hebt, zoals het CBS bij de eerste
-    berekening van de economische groei. Tot slot kun je ook gewoon fouten maken.
-    Wie weet heb je op je feest mensen over het hoofd gezien. Misschien had je te
-    veel gedronken of was je te druk aan het praten met anderen. Nu heeft het geen
-    grote gevolgen als jij 31 in plaats van 33 mensen op bezoek hebt gehad. Maar in
-    andere gevallen kan het grote consequenties hebben. Bij verkiezingen bijvoorbeeld,
-    het feest van de democratie.\n\nEen geldige stem uitbrengen is nog niet zo makkelijk\nStemmen
-    tellen, het lijkt zo\u2019n eenvoudige zaak. Maar net als met je verjaardag kan
-    er op twee vlakken iets misgaan. Allereerst: hoe definieer je wat een geldige
-    stem is? Een bizarre discussie op 18 december 2008 laat pijnlijk zien hoe moeilijk
-    dit is. Rechters en advocaten kwamen op die dag bij elkaar in een rechtszaal in
-    de Amerikaanse staat Minnesota. De senaatsverkiezing was al meer dan een maand
-    achter de rug, maar nog steeds was de uitslag niet bekend. Het was krap, heel
-    krap: de Democraat Al Franken had maar 215 stemmen minder dan de Republikein Norm
-    Coleman. En dus moesten de stemmen herteld en gingen advocaten van beide kanten
-    elk stembiljet nauwkeurig ontleden. Zo ook het biljet waar iemand het vakje bij
-    Al Franken had ingekleurd maar ook \u2018Hagedissen Mensen\u2019 had opgeschreven.
-    Dat is een stem voor Franken, vond Marc Elias, Frankens advocaat. Maar de advocaat
-    van Coleman was het daar niet mee eens: de stem telde niet, want er was een naam
-    ingevuld. Onzin, reageerde Elias, Hagedissen Mensen is niet eens een echt persoon.\nDe
-    rechters mengden zich in de discussie. \u2018Je kunt niet weten of er iemand bestaat
-    met de naam \u201CHagedissen Mensen\u201D,\u2019 zei rechter Eric Magnuson. \u2018Trouwens,\u2019
-    vroeg een andere rechter, Edward Cleary. \u2018Is \u2018Mensen\u2019 niet meervoud?\u2019\n\u2018Je
-    kunt toch ook Sims van je achternaam heten?\u2019 reageerde Magnuson.\nDe conclusie
-    van deze idiote discussie: Hagedissen Mensen zou een echt persoon kunnen zijn,
-    dus het stembiljet was ongeldig. Niet veel later was het alweer tijd voor de volgende
-    absurde casus: iemand had op een stembiljet \u2018-stein\u2019 achter Al Frankens
-    naam gekrabbeld. Naast de definitie, speelt - net als bij de feestgangers - een
-    ander probleem: er kan een hoop misgaan. Stemmentellers kunnen het biljet verkeerd
-    lezen, de tel kwijtraken of een foutje maken bij het invullen van het aantal stemmen.\nDubbelzinnige
-    stembiljetten en telfouten zorgen voor een foutenmarge in het aantal stemmen.
-    Het is vaak moeilijk te zeggen hoe groot die marge precies is. Maar in het geval
-    van Minnesota was het duidelijk. Daar bleek bij een hertelling dat er 0,04 procent
-    verschil zat tussen de eerste en de tweede telling van de stemmen.\nJe kunt beter
-    een muntje opgooien\nOp 13 april werd bekend: Al Franken had gewonnen. Maar zijn
-    voorsprong was miniem: 312 stemmen - 0,01 procent van het totaal. Dat is minder
-    dan de 0,04 procent marge, en dus had net zo goed Coleman senator kunnen worden.\n\n\n\n\n\n"
+  m_Text: "<b><size=20>If Shell knew climate change was dire 25 years ago, why still
+    business as usual today?</size></b>\n\nClimate change \u201Cat a rate faster than
+    at any time since the end of the ice age \u2013 change too fast perhaps for life
+    to adapt, without severe dislocation.\u201D That was the startling warning issued
+    by the oil giant Shell more than a quarter of a century ago.\r\n\r\nThe company\u2019s
+    farsighted 1991 film, titled\_Climate of Concern, set out with crystal clarity
+    how fossil fuel burning was warming the world and that serious consequences could
+    well result.\r\n\u201CTropical islands barely afloat even now, first made inhabitable,
+    and then obliterated beneath the waves [\u2026] coastal lowlands everywhere suffering
+    pollution of precious groundwater, on which so much farming and so many cities
+    depend,\u201D says the film\u2019s narrator, over disturbing images of people
+    affected by natural disasters and famine. \u201CIn a crowded world subject to
+    such adverse shifts of climate, who would take care of such greenhouse refugees?\u201D
+    \r\n\r\nThe film acknowledged the uncertainties in the computer model predictions
+    at the time, but noted the various scenarios had \u201Ceach prompted the same
+    serious warning, a warning endorsed by a uniquely broad consensus of scientists
+    in their report to the United Nations at the end of 1990.\u201D\r\n\u201CWhat
+    they foresee is not a steady and even warming overall, but alterations to the
+    familiar patterns of climate, and the increasing frequency of abnormal weather,\u201D
+    it cautioned. \u201CIt is thought that warmer seas could make destructive [storm]
+    surges more frequent and even more ferocious.\u201D\r\n\u201CWhether or not the
+    threat of global warming proves as grave as the scientists predict, is it too
+    much to hope as it might act as the stimulus \u2013 the catalyst \u2013 to a new
+    era of technical and economic cooperation?\u201D the film concludes. \u201COur
+    numbers are many, and infinitely diverse. But the problems and dilemmas of climatic
+    change concern us all.\u201D\r\n\r\nThe film was made for public viewing, particularly
+    in schools and universities, but is believed to have been unseen for many years.
+    It was remarkably prescient, according to Prof. Tom Wigley, who was head of the
+    Climate Research Unit at the University of East Anglia when it helped Shell with
+    the 1991 film.\r\n\u201CIt\u2019s amazing it\u2019s 25 years ago. Incredible,\u201D
+    he said. \u201CIt was quite comprehensive on what might happen, what the consequences
+    are, and what we can do about it. I mean, there\u2019s not much more.\u201D He
+    said that the predictions for temperature and sea level rises in the 1991 film
+    were \u201Cpretty good, compared with current understanding.\u201D \r\n\r\n\u201CWhat\u2019s
+    really striking is nothing has happened [since] to make you doubt the science
+    as it was stated then,\u201D said Tom Burke, at the green thinktank E3G and a
+    former member of Shell\u2019s external review committee.\r\nBut Shell\u2019s actions
+    on global warming since 1991, such as major investments in highly polluting tar
+    sands and lobbying against climate action, have been heavily criticized. In 2015,
+    it was accused of\_behaving like a \u201Cpsychopath\u201D\_by the UK\u2019s former
+    climate change envoy and of being engaged in a cynical attempt to block action
+    on global warming. Even its own former group managing director, Sir Mark Moody-Stuart,
+    said in 2015 it was \u201Cdistressing\u201C remarkably little progress\u201D\_had
+    been made on climate change by Shell and other oil companies.\r\n\r\nThe revelation
+    of the film,\_.obtained by De Correspondent\_and shared with the Guardian, has
+    renewed the criticism.\u201C The film shows that Shell understood that the threat
+    was dire, potentially existential for civilization, more than a quarter of a century
+    ago,\u201D said Jeremy Leggett, a solar power entrepreneur and former geologist
+    who had earlier researched shale deposits with Shell and BP funding.\r\n\r\n\u201CI
+    see to this day how they doggedly argue for rising gas use, decades into the future,
+    despite the clear evidence that fossil fuels have to be phased out completely,\u201D
+    he said. \u201CI honestly feel that this company is guilty of a modern form of
+    crime against humanity. They will point out that they have behaved no differently
+    than their peers, BP, Exxon, and Chevron. For people like me, of which there are
+    many, that is no defense.\u201D\r\nPaul Spedding, HSBC\u2019s former global head
+    of oil and gas and now at the thinktank Carbon Tracker, said about half of Shell\u2019s
+    reserve base is natural gas, the least carbon intensive of the fossil fuels. \u201CHowever,
+    its oil portfolio could be a ticking tar-sands time bomb. Tar sands, which make
+    up nearly 30% of group oil reserves, are significantly more carbon intensive than
+    conventional oil. As things stand, Shell\u2019s oil production is destined to
+    become heavier, higher cost, and higher carbon, hardly a profile that fits the
+    outlook described in Shell\u2019s video.\u201D\r\n\r\nShell had, in fact, known
+    of the risks of climate change even earlier. A \u201Cconfidential\u201D company
+    report written in 1986, also seen by the Guardian, noted the significant uncertainties
+    in climate science at the time but warned of the possibility of \u201Cfast and
+    dramatic\u201D changes that \u201Cwould impact on the human environment, future
+    living standards, and food supplies, and could have major social, economic, and
+    political consequences.\u201D\r\nIn 1989, Shell had already taken the effects
+    of climate change into account\_in the construction of an oil rig. But in the
+    same year, the so-called Global Climate Coalition (GCC)\_\_was formed by the major
+    oil companies, including Shell\u2019s US operation Shell Oil. It lobbied hard
+    to cast doubt on climate science and oppose government action, and in 1998 Shell
+    withdrew,\_citing \u201Cirreconcilable\u201D differences.\r\nHowever, Shell\_
+    remained a member\_of another business lobby group that campaigned against climate
+    action, the American Legislative Exchange Council, until 2015 and remains a member
+    of the Business Roundtable and American Petroleum Institute, which both fought
+    against Barack Obama\u2019s Clean Power Plan.\r\nThe company has said it has remained
+    a member of groups that hold different views on climate action\_to \u201Cinfluence\u201D
+    them.\_\_But Thomas O\u2019Neill, from the group Influence Map, which tracks lobbying,
+    said: \u201CThe trade associations and industry groups are there to say things
+    the company cannot or does not want to say. It\u2019s deliberately that way.\u201D\r\n\r\n\r\nShell
+    has also\_ lobbied directly to undermine European renewable energy targets, a
+    sector it has invested in, although at a much lower level than oil and gas. In
+    2016, Shell launched its New Energies division, with annual spending less than
+    1%\_of the total $30 billion Shell pumps into oil and gas.\r\nDespite the company\u2019s
+    public support since the 1990s for carbon taxes to drive cuts in emissions, Shell\_lobbied
+    in 2015 for exemptions\_\_for the electricity it produces and uses, particularly
+    for its offshore oil and gas platforms.\r\n\r\nSome of Shell\u2019s investments
+    today are also criticized for being incompatible with the 2\xB0C warming target
+    agreed by the world\u2019s nations. A 2015\_Carbon Tracker report\_\_concluded
+    the company was planning to invest more than $75 billion in such projects over
+    the following decade, part of a \u201Ccarbon bubble\u201D in which reserves are
+    being developed that cannot be burned if climate change is to be halted \u2013
+    a concern\_ shared by the Bank of England and World Bank\_.\r\n\r\nAnother Carbon
+    Tracker report in 2016 cited a 1998 Shell document showing\_ the company was aware
+    of this risk.\_\u201CShell knew about, but did not act on, the risks of a carbon
+    bubble,\u201D the report said. \u201CLooking back over the last 20 years, it seems
+    like Shell has gone backwards in terms of transparency, and is still recycling
+    the same old green initiatives, and attempting to deflect responsibility in the
+    face of an existential threat to its business.\u201D\r\nShell was one of the first
+    major oil companies to acknowledge the need to act on climate change and has long
+    argued that providing affordable energy was vital for the world and its development.
+    The 1991 film anticipated the problem: \u201CHow could [developing] countries
+    continue to advance but leapfrog the energy-intensive phase of development, by
+    which other nations prospered before its adverse consequences came to light?\u201D\r\nBut
+    in 2015 its own external review committee concluded Shell\u2019s sustainability
+    report did not \u201Cadequately convey the urgency of this [low-carbon energy]
+    transition.\u201D\_Earlier in February, Shell\u2019s CEO Ben van Beurden said:
+    \u201CWe believe that climate change is real and we believe that action will be
+    needed.\u201D\r\nMoody-Stuart, who was also chairman of Shell from 1998-2002,
+    told the Guardian the broad criticism of the company was unfair. \u201CI don\u2019t
+    think enough has been done, but I wouldn\u2019t single out the oil industry. Governments
+    and others have some responsibility, and Shell and others have called for a price
+    on carbon since the 1990s.\u201D\r\n\r\n\u201CIt hasn\u2019t got very far at all
+    but that is not Shell\u2019s fault,\u201D he said. \u201CIt is pretty unique for
+    an industry to be actually asking for something which will increase the price
+    of their product, but they are asking for it because that is what is needed to
+    drive the industry in the right direction.\u201D\r\nBurke, a former head of Friends
+    of the Earth, agreed there is a wider problem. \u201CIt is too easy to blame it
+    all on Shell for getting it wrong,\u201D he said, as there has been \u201Ca broader
+    societal failure.\u201D\r\nShell\u2019s 1986 report said the climate change problem
+    was one that \u201Cultimately only governments can tackle.\u201D But it also noted,
+    over three decades ago, that the energy industry \u201Chas very strong interests
+    at stake and much expertise to contribute. It also has its own reputation to consider,
+    there being much potential for public anxiety and pressure group activity.\u201D"
 --- !u!222 &1260164455
 CanvasRenderer:
   m_ObjectHideFlags: 0
