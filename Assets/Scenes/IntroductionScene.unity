@@ -731,13 +731,13 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Hi!\r\n\r\nFirst of all, thanks a lot for participating! We are researching
     the idea of improving people\u2019s posture during smartphone usage. Therefore,
-    we\u2019ve come up with the idea of an app that tells you when your posture is
-    not that well which could hurt you in the long run.\r\n\r\n[DataText] This means
-    that your neck and/or back is possibly tilted forwards, whereas standing with
-    a straight neck and spine is considered to be a healthier posture. Improving your
-    posture therefore means that you could straighten your neck and spine. This will
-    also change the orientation of your smartphone.\n\nThe app you are using consists
-    of two parts: a <i>reading</i> part and a <i>typing part</i>. First, you are going
+    we came up with the idea of an app that tells you when your posture is not that
+    well which could hurt you in the long run.\r\n\r\n[DataText] This means that your
+    neck and/or back is possibly tilted forwards, whereas standing with a straight
+    neck and spine is considered to be a healthier posture. Improving your posture
+    therefore means that you could straighten your neck and spine. This will also
+    change the orientation of your smartphone.\n\nThe app you are using consists of
+    two parts: a <i>reading</i> part and a <i>typing part</i>. First, you are going
     to read a text for about 5 minutes. After that, there is time for a little break
     before starting the typing part. The typing part will consist of several open
     questions about the text. <b>Whoever gives the best answers receives a bol.com
