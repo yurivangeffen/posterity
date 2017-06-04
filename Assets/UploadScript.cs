@@ -3,8 +3,18 @@ using System.Text;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class UploadScript : MonoBehaviour {
+
+	public Text hashText = null;
+	private string hashHex;
+
+	public void Start()
+	{
+		hashHex = string.Format("{0:X2}", DateTime.Now.Ticks.ToString().GetHashCode());
+		hashText.text = "Code: " + hashHex;
+	}
 
 	public void OnUploadClicked()
 	{
@@ -16,7 +26,7 @@ public class UploadScript : MonoBehaviour {
 		//email Id to send the mail to
 		string email = "posterityuu@gmail.com";
 		//subject of the mail
-		string subject = EscapeString("data_" + OrientationLogger.dataType + "_" + DateTime.Now.Ticks.ToString());
+		string subject = EscapeString(string.Format("data_" + OrientationLogger.dataType + "_{0}", hashHex));
 		//body of the mail which consists of Device Model and its Operating System
 		string body = EscapeString(GetDataString());
 		//Open the Default Mail App

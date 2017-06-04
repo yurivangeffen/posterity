@@ -285,7 +285,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -883.85
+      value: -896.45
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -330,6 +330,14 @@ Prefab:
     - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
       propertyPath: m_Name
       value: QuestionCombo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: "The title of this article is \u201CIf Shell knew climate change was
+        dire 25 years ago, why still business as usual today?\u201D Based on the text
+        and your own opinion, why do you think  Shell have not changed their business,
+        despite the knowledge of climate change?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
@@ -645,7 +653,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -401.75
+      value: -414.35
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -691,6 +699,12 @@ Prefab:
       propertyPath: m_Name
       value: QuestionCombo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: What is the Global Climate Coalition (GCC), and who were members/founders
+        of that group?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
   m_IsPrefabParent: 0
@@ -708,7 +722,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1260164452}
   - component: {fileID: 1260164455}
-  - component: {fileID: 1260164454}
   - component: {fileID: 1260164453}
   - component: {fileID: 1260164456}
   m_Layer: 5
@@ -756,39 +769,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &1260164454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1260164451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 871556610524c4194bd291ceda47dab3, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 14
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
 --- !u!222 &1260164455
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -982,7 +962,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -723.14996
+      value: -735.75
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -1027,6 +1007,13 @@ Prefab:
     - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
       propertyPath: m_Name
       value: QuestionCombo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: "\u201CShell has also  lobbied directly to undermine European renewable
+        energy targets, a sector it has invested in, although at a much lower level
+        than oil and gas\u201D What was the purpose of this lobby?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
@@ -1153,7 +1140,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -241.04999
+      value: -253.65
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -1198,6 +1185,13 @@ Prefab:
     - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
       propertyPath: m_Name
       value: QuestionCombo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: "According to Prof. Tom Wigley, the predications in the movie Climate
+        of Concern  were \u201Cremarkably prescient\u201D. Which predictions were
+        correct according to Wigley?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
@@ -1250,7 +1244,7 @@ Prefab:
         type: 2}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1260164454}
+      objectReference: {fileID: 0}
     - target: {fileID: 114594751981697466, guid: 68513e70e9d8249eab350a7ecf591607,
         type: 2}
       propertyPath: toastCanvasGroup
@@ -1320,7 +1314,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -80.35
+      value: -86.65
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -1330,7 +1324,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 160.7
+      value: 173.3
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -1361,6 +1355,12 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: What was the purpose of the film Climate of Concern, and what was the
+        target audience for that movie?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
@@ -1526,7 +1526,7 @@ Prefab:
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -562.44995
+      value: -575.05
       objectReference: {fileID: 0}
     - target: {fileID: 224485774686043514, guid: 4b10cbd54e311b94f883c84d0f3def68,
         type: 2}
@@ -1571,6 +1571,15 @@ Prefab:
     - target: {fileID: 1134020108376044, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
       propertyPath: m_Name
       value: QuestionCombo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114349541487269728, guid: 4b10cbd54e311b94f883c84d0f3def68,
+        type: 2}
+      propertyPath: m_Text
+      value: "Complete the sentence: \u201CShell had, in fact, known of the risks
+        of climate change even earlier. A \u201Cconfidential\u201D company report
+        written in 1986, also seen by the Guardian, noted the significant uncertainties
+        in climate science at the time but warned of the possibility of \u201Cfast
+        and dramatic\u201D changes that would impact \u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u201D"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b10cbd54e311b94f883c84d0f3def68, type: 2}
