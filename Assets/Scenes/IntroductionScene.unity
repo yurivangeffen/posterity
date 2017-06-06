@@ -740,12 +740,12 @@ MonoBehaviour:
     two parts: a <i>reading</i> part and a <i>typing part</i>. First, you are going
     to read a text for about 5 minutes. After that, there is time for a little break
     before starting the typing part. The typing part will consist of several open
-    questions about the text. <b>Whoever gives the best answers receives a bol.com
-    gift card of \u20AC25!\r</b>\n\r\n<i>In short, these are the things you need to
+    questions about the text. <i>Whoever gives the best answers receives a bol.com
+    gift card of \u20AC25!\r</i>\n\r\n<i>In short, these are the things you need to
     know to start the experiment:</i>\r\nTry to use the smartphone like you\u2019re
     used to. Stay in a standing position and do not lean on any surroundings during
     the experiment.\r\nAsking questions is not allowed during the experiment.\r\nSpeed
-    doesn\u2019t matter; take your time.\r\n\r\nAre you ready to start with the <b>reading</b>
+    doesn\u2019t matter; take your time.\r\n\r\nAre you ready to start with the <i>reading</i>
     part?\n\n\n\n"
 --- !u!114 &41
 MonoBehaviour:
