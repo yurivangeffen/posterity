@@ -385,7 +385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &26
@@ -746,7 +746,7 @@ MonoBehaviour:
     used to. Stay in a standing position and do not lean on any surroundings during
     the experiment.\r\nAsking questions is not allowed during the experiment.\r\nSpeed
     doesn\u2019t matter; take your time.\r\n\r\nAre you ready to start with the <i>reading</i>
-    part?\n\n\n\n"
+    part?\n\n\n\n\n\n"
 --- !u!114 &41
 MonoBehaviour:
   m_ObjectHideFlags: 0

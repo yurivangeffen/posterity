@@ -572,7 +572,7 @@ MonoBehaviour:
     during the experiment.\r\nAsking questions is not allowed during the experiment.\r\nSpeed
     doesn\u2019t matter; take your time.\r\n\r\nAnd remember: whoever gives the best
     answers receives a bol.com gift card of \u20AC25!\r\n\r\nAre you ready to start
-    with the <i>typing</i> part?\n\n\n\n"
+    with the <i>typing</i> part?\n\n\n\n\n\n"
 --- !u!222 &1260164455
 CanvasRenderer:
   m_ObjectHideFlags: 0
