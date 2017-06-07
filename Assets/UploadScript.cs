@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class UploadScript : MonoBehaviour {
 
+	public static List<float> NotificationTimes = new List<float>();
+
+	private static List<List<float>> allNotificationTimes = new List<List<float>>();
+
 	public Text hashText = null;
 	private string hashHex;
 
@@ -21,16 +25,40 @@ public class UploadScript : MonoBehaviour {
 		UploadData();
 	}
 
+	public static void NextTest()
+	{
+		allNotificationTimes.Add(new List<float>(NotificationTimes));
+		NotificationTimes = new List<float>();
+	}
+
 	private void UploadData()
 	{
 		//email Id to send the mail to
 		string email = "posterityuu@gmail.com";
 		//subject of the mail
 		string subject = EscapeString(string.Format("data_" + OrientationLogger.dataType + "_{0}", hashHex));
-		//body of the mail which consists of Device Model and its Operating System
-		string body = EscapeString(GetDataString());
+		//body of the mail
+		string body = EscapeString(GetNotificationTimes());
+		body += EscapeString(GetDataString());
 		//Open the Default Mail App
 		Application.OpenURL ("mailto:" + email + "?subject=" + subject + "&body=" + body);
+	}
+
+	private string GetNotificationTimes()
+	{
+		string times = "Notification Moments:";
+
+		foreach (List<float> list in allNotificationTimes)
+		{
+			foreach (float moment in list)
+			{
+				times += "\n" + moment;
+			}
+			times += "\n";
+		}
+		
+		times += "\n\n";
+		return times;
 	}
 
 	private string GetDataString()

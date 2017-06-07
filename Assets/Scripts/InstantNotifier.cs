@@ -22,7 +22,7 @@ public class InstantNotifier : Notifier
         timer = thresholdTime;
     }
 
-    public override void Check(float value)
+    public override void Check(float value, float time)
     {
         // Check if we are over the threshold
         if (value >= threshold)
@@ -31,7 +31,7 @@ public class InstantNotifier : Notifier
             // ...longer than allowed
             if (timer <= 0 && !isNotifying)
             {
-                Notify();
+                Notify(time);
             }
         }
         else
@@ -45,7 +45,7 @@ public class InstantNotifier : Notifier
         }
     }
 
-	protected void Notify()
+	protected void Notify(float time)
     {
         if (!isNotifying)
         {
@@ -53,6 +53,8 @@ public class InstantNotifier : Notifier
             isNotifying = true;
             Handheld.Vibrate();
             
+            UploadScript.NotificationTimes.Add(time);
+
             StartCoroutine(FadeIn());
         }
 	}

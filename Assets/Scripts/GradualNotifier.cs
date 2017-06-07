@@ -8,7 +8,7 @@ public class GradualNotifier : Notifier
     public CanvasGroup text;
 	public static float upperVisibleRange = 60;
 
-    public override void Check(float value)
+    public override void Check(float value, float time)
     {
         float alpha = 1f - (Mathf.Clamp(value, 0f, upperVisibleRange) / (upperVisibleRange));
         text.alpha = alpha;

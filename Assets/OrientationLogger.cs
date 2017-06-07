@@ -19,6 +19,14 @@ public class OrientationLogger : MonoBehaviour {
 	private float lastLogTimeNormalized = 0f;
 	private float lastLogTime = 0f;
 
+	public float LastLogTimeNormalized
+	{
+		get
+		{
+			return lastLogTimeNormalized;
+		}
+	}
+
 	public void StartLogging()
 	{
         if(readData == null)
@@ -35,6 +43,7 @@ public class OrientationLogger : MonoBehaviour {
 	public void StopLogging()
 	{
 		isLogging = false;
+		UploadScript.NextTest();
     }
 
 	static public float CurrentOrientation(bool calibrated = true)
@@ -46,10 +55,9 @@ public class OrientationLogger : MonoBehaviour {
 		{
 			//Bound
 			xOrientation = Mathf.Clamp(xOrientation, verticalCalibrationBound, horizontalCalibrationBound);
-			Debug.Log("xOrientation: " + xOrientation);
+
 			//Range 0-90
 			xOrientation = ((xOrientation-verticalCalibrationBound) / (horizontalCalibrationBound-verticalCalibrationBound)) * 90f;
-			Debug.Log("xOrientation2: " + xOrientation);
 		}
 
 

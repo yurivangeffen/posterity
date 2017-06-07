@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Notifier : MonoBehaviour
 {	
-	public virtual void Check(float value)
+	public virtual void Check(float value, float time)
     {
     }
 }
